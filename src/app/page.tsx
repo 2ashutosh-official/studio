@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { motion, useAnimation } from "framer-motion";
 import { Icons } from '@/components/icons';
+import SocialFeed from '@/components/social-feed';
 
 export default function Home() {
     const [isIntersecting, setIsIntersecting] = useState(false);
@@ -115,7 +116,17 @@ export default function Home() {
                 </motion.div>
             </motion.div>
         </section>
+
+        <section className="mt-12">
+            <SocialFeed
+                youtubeChannelId="UC_x5XG1OV2P6uZZ5FSM9Ttw"
+                twitterUsername="elonmusk"
+                linkedinUserId="dummy-linkedin-user-id"
+                maxResults={3}
+            />
+        </section>
       </div>
     </div>
   );
 }
+
