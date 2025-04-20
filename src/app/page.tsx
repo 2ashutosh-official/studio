@@ -7,6 +7,21 @@ import { motion, useAnimation } from "framer-motion";
 import { Icons } from '@/components/icons';
 import SocialFeed from '@/components/social-feed';
 import {app} from './firebase';
+import { Canvas } from "@react-three/fiber";
+import { Stars } from '@react-three/drei';
+
+const Hyperspace = () => {
+    return (
+        <Stars
+            radius={100}
+            depth={50}
+            count={5000}
+            factor={4}
+            saturation={0}
+            fade={true}
+        />
+    );
+};
 
 export default function Home() {
     const [isIntersecting, setIsIntersecting] = useState(false);
@@ -42,6 +57,9 @@ export default function Home() {
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden">
+        <Canvas style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
+            <Hyperspace />
+        </Canvas>
       <div className="container relative z-10 p-4">
         <section className="text-center">
           <motion.h1
