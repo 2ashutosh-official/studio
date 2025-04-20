@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { motion, useAnimation } from "framer-motion";
+import { Icons } from '@/components/icons';
 
 export default function Home() {
     const [isIntersecting, setIsIntersecting] = useState(false);
@@ -78,7 +79,7 @@ export default function Home() {
                             <CardDescription>A brief introduction about myself.</CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <p>I am passionate about building high-quality software...</p>
+                            <p>I am Ashu, a passionate Kotlin specialist focusing on Android, Multiplatform (Compose), and backend development using Ktor and Spring Boot. I strive to build high-quality, performant, and user-friendly applications.</p>
                         </CardContent>
                     </Card>
                 </motion.div>
@@ -90,10 +91,13 @@ export default function Home() {
                         </CardHeader>
                         <CardContent>
                             <ul>
-                                <li>Kotlin</li>
-                                <li>Android</li>
-                                <li>Compose</li>
-                                {/* Add more skills here */}
+                                <li><Icons.circle className="mr-2 inline-block" /> Kotlin</li>
+                                <li><Icons.circle className="mr-2 inline-block" /> Android</li>
+                                <li><Icons.circle className="mr-2 inline-block" /> Compose Multiplatform</li>
+                                <li><Icons.circle className="mr-2 inline-block" /> Ktor</li>
+                                <li><Icons.circle className="mr-2 inline-block" /> Spring Boot</li>
+                                <li><Icons.circle className="mr-2 inline-block" /> Firebase</li>
+                                
                             </ul>
                         </CardContent>
                     </Card>
@@ -105,7 +109,7 @@ export default function Home() {
                             <CardDescription>My professional journey and key roles.</CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <p>Software Engineer at XYZ Corp...</p>
+                            <p>Currently, I work as a Software Engineer. My responsibilities include developing and maintaining Android applications, creating cross-platform solutions using Compose Multiplatform, and building backend services with Ktor and Spring Boot.</p>
                         </CardContent>
                     </Card>
                 </motion.div>
