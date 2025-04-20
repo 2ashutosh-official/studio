@@ -3,17 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Canvas } from "@react-three/fiber";
-import { Stars } from "@react-three/drei";
 import { motion, useAnimation } from "framer-motion";
-
-const Hyperspace = () => {
-  return (
-    <Canvas style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: '#111' }}>
-      <Stars fade={true} />
-    </Canvas>
-  );
-};
 
 export default function Home() {
     const [isIntersecting, setIsIntersecting] = useState(false);
@@ -49,7 +39,6 @@ export default function Home() {
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden">
-       <Hyperspace />
       <div className="container relative z-10 p-4">
         <section className="text-center">
           <motion.h1
