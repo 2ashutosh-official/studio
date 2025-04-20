@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { motion, useAnimation } from "framer-motion";
 import { Icons } from '@/components/icons';
 import SocialFeed from '@/components/social-feed';
+import {app} from './firebase';
 
 export default function Home() {
     const [isIntersecting, setIsIntersecting] = useState(false);
@@ -129,4 +130,3 @@ export default function Home() {
     </div>
   );
 }
-
