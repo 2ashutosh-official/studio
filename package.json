@@ -9,7 +9,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "deploy": "next build && next export -o dist && touch dist/.nojekyll && git add dist -f && git commit -m \"Deploy to GitHub Pages\" && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "@genkit-ai/googleai": "^1.0.4",
