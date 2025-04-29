@@ -10,7 +10,7 @@ const projectsData = [
     {
         id: 1,
         title: "Project 1",
-        description: "Description of Project 1. This project focuses on...",
+        description: "Description of Project 1. This project focuses on...very important future of earth",
         technologies: ["React", "Tailwind CSS", "Firebase"],
         imageUrl: "https://picsum.photos/400/225",
         projectLink: "#",
@@ -71,11 +71,14 @@ const ProjectsPage = () => {
             <ScrollArea className="h-[600px] w-full rounded-md border">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
                     {projectsData.map((project) => (
-                        <Card key={project.id} className="bg-card text-card-foreground shadow-sm">
+                        <Card key={project.id} className="bg-[#e0e0e0] text-card-foreground shadow-sm">
                             <CardHeader>
                                 <CardTitle>{project.title}</CardTitle>
                             </CardHeader>
                             <CardContent>
+                            <CardDescription className="text-sm text-muted-foreground mb-4">
+                                    {project.description}
+                                </CardDescription>
                                 <img
                                     src={project.imageUrl}
                                     alt={project.title}
@@ -83,9 +86,7 @@ const ProjectsPage = () => {
                                     width={400}
                                     height={225}
                                 />
-                                <CardDescription className="text-sm text-muted-foreground mb-4">
-                                    {project.description}
-                                </CardDescription>
+                               
                                 <div className="flex flex-wrap gap-2">
                                     {project.technologies.map((tech) => (
                                         <Badge key={tech}>{tech}</Badge>

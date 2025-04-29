@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:Inter, font-sans, Helvetica, sans-serif;
+  /* @apply font-sans; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .custom-cursor {
@@ -21,7 +24,7 @@ body {
 
 .custom-cursor.hovering {
     transform: translate(-50%, -50%) scale(1.5);
-    background-color: rgba(0, 128, 128, 0.8); /* Teal with transparency */
+    background-color: rgba(255, 50, 81, 0.8); /* kotlin red with transparency */
 }
 
 
@@ -65,7 +68,7 @@ body {
   .dark {
     --background: 265, 100%, 95%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
+    --card: 0 0% 69%;
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
